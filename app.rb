@@ -1,6 +1,6 @@
 require 'sinatra/base'
 
-class MyRackApp < Sinatra::Base
+class ShuffleDecider < Sinatra::Base
 
   get '/' do
     erb :index
