@@ -1,8 +1,10 @@
+# The Deck class is comprised of 52 individual cards
+
 require_relative 'card'
 
 class Deck
 
-attr_reader :deck
+  attr_reader :deck
 
   def initialize
     @deck = generate_deck()
