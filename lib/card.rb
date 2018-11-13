@@ -9,6 +9,11 @@ class Card
   def initialize(rank, suit)
     @rank = rank
     @suit = suit
+    @value = value()
+  end
+
+  def value
+    RANKS.index(rank.to_sym) + 1
   end
 
 end

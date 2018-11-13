@@ -1,15 +1,36 @@
 require 'card'
 
 RSpec.describe Card do
-  subject(:card) { described_class.new('A', 'Spades') }
-
+  subject(:ace_of_spades) { described_class.new('A', 'Spades') }
+  subject(:queen_of_hearts) { described_class.new('Q', 'Hearts') }
+  subject(:two_of_clubs) { described_class.new('2', 'Clubs') }
+  subject(:ten_of_diamonds) { described_class.new('10', 'Diamonds') }
+  
   context 'Initialising' do
     it "The new card has a rank" do
-      expect(card.rank).to eq('A')
+      expect(ace_of_spades.rank).to eq('A')
     end
 
     it "The new card has a suit" do
-      expect(card.suit).to eq('Spades')
+      expect(ace_of_spades.suit).to eq('Spades')
+    end
+  end
+
+  context 'Card value' do
+    it "Ace of Spades has a value of 1" do
+      expect(ace_of_spades.value).to eq(1)
+    end
+
+    it "Queen of Hearts has a value of 12" do
+      expect(queen_of_hearts.value).to eq(12)
+    end
+
+    it "Two of Clubs has a value of 2" do
+      expect(two_of_clubs.value).to eq(2)
+    end
+
+    it "Ten of Diamonds has a value of 10" do
+      expect(ten_of_diamonds.value).to eq(10)
     end
   end
 
