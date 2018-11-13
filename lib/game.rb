@@ -47,10 +47,10 @@ class Game
 
   def display_player_hands
     @hands.each do |player| 
-      puts player.player
-      puts "=========="
+      puts "#{player.player} scores: #{player.score}"
+      puts "====================="
       player.display_hand
-      puts "----------"
+      puts "---------------------"
     end
     return nil
   end

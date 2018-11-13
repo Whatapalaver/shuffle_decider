@@ -8,9 +8,9 @@ Basic User Stories
 
 - [x] As a lone player, so I can have help with my decision making, I'd like two hands to be dealt with the highest scorer declared a winner or a draw for matching scores.
 
-- [ ] As a player, so I can control the speed of the game, I would like to determine the number of cards dealt for each hand.
+- [x] As a player, so I can control the speed of the game, I would like to determine the number of cards dealt for each hand.
 
-- [ ] As a player, who would like to extend this game to my friends, I would like to control the number of players or hands that are dealt.
+- [x] As a player, who would like to extend this game to my friends, I would like to control the number of players or hands that are dealt.
 
 - [ ] As the computer, who wants to prevent unfair play, I would like to block unfair or impossible combinations of players and cards.
 
@@ -41,7 +41,7 @@ To test:
 - This command will run both the rspec tests, capybara and simplecov `bundle exec rspec`
 - To view the coverage detail as a webpage run `open coverage/index.html`
 
-irb Feature Testing:
+irb Feature Testing for default 2 player 5 card deal:
 
 ```
 require './lib/game.rb'
@@ -52,7 +52,29 @@ test_game.display_player_hands
 test_game.result
 ```  
 
-![irb Output](https://github.com/Whatapalaver/shuffle_decider/blob/master/irb_two_player.png)  
+irb Feature Testing for custom players and default 5 card deal:
+
+```
+require './lib/game.rb'
+three_player_game = Game.new(3)
+three_player_game.shuffle_pack
+three_player_game.deal
+three_player_game.display_player_hands
+three_player_game.result
+```
+
+irb Feature Testing for custom players and custom card deal:
+
+```
+require './lib/game.rb'
+four_player_3_card_game = Game.new(4,3)
+four_player_3_card_game.shuffle_pack
+four_player_3_card_game.deal
+four_player_3_card_game.display_player_hands
+four_player_3_card_game.result
+```
+
+![irb Output](https://github.com/Whatapalaver/shuffle_decider/blob/master/irb_output.png)  
 
 My approach
 ----
