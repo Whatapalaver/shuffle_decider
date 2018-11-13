@@ -52,7 +52,7 @@ test_game.display_player_hands
 test_game.result
 ```  
 
-![irb Output]('./irb_two_player.png')  
+![irb Output](https://github.com/Whatapalaver/shuffle_decider/blob/master/irb_two_player.png)  
 
 My approach
 ----
