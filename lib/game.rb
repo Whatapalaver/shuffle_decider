@@ -44,6 +44,16 @@ class Game
     # Only works with default two player game
     player_scores[0] == player_scores[1]
   end
+
+  def display_player_hands
+    @hands.each do |player| 
+      puts player.player
+      puts "=========="
+      player.display_hand
+      puts "----------"
+    end
+    return nil
+  end
   
 
   private

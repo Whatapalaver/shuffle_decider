@@ -6,7 +6,7 @@ Coding Chalenge: World's Simplest Poker
 Basic User Stories
 ----
 
-- [ ] As a lone player, so I can have help with my decision making, I'd like two hands to be dealt (compute hand and my hand) with the highest scorer declared a winner or a draw for matching scores.
+- [x] As a lone player, so I can have help with my decision making, I'd like two hands to be dealt with the highest scorer declared a winner or a draw for matching scores.
 
 - [ ] As a player, so I can control the speed of the game, I would like to determine the number of cards dealt for each hand.
 
@@ -40,6 +40,19 @@ To test:
 
 - This command will run both the rspec tests, capybara and simplecov `bundle exec rspec`
 - To view the coverage detail as a webpage run `open coverage/index.html`
+
+irb Feature Testing:
+
+```
+require './lib/game.rb'
+test_game = Game.new
+test_game.shuffle_pack
+test_game.deal
+test_game.display_player_hands
+test_game.result
+```  
+
+![irb Output]('./irb_two_player.png')  
 
 My approach
 ----

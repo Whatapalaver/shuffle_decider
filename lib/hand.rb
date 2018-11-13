@@ -19,4 +19,9 @@ class HandOfCards
 
   end
 
+  def display_hand
+    display = @hand.map { |card| "#{card.rank}_#{card.suit}" }
+    puts display.join("\n")
+  end
+
 end
