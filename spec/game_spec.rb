@@ -32,4 +32,15 @@ RSpec.describe Game do
     end
   end
 
+  describe 'deal' do
+
+    it "it populates players hands with default number of cards" do
+      test_game.deal
+      player1_hand = test_game.hands[0].hand
+      player2_hand = test_game.hands[1].hand
+      expect(player1_hand.length).to eq(Game::DEFAULT_DEAL_SIZE)
+      expect(player2_hand.length).to eq(Game::DEFAULT_DEAL_SIZE)
+    end
+  end
+
 end

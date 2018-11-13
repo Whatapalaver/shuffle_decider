@@ -21,6 +21,14 @@ class Game
     @deck_of_cards.deck = @deck_of_cards.deck.shuffle()
   end
 
+  def deal
+    @deal_size.times do
+      @hands.each do |player| 
+        player.hand.push(@deck_of_cards.deck.pop)
+      end
+    end
+  end
+
   private
 
   def generate_hands
