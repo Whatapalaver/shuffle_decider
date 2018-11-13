@@ -1,7 +1,8 @@
-class Cards
+require_relative 'card'
 
-  RANKS = %i[Ace two three four five
-    six seven eight nine ten Jack Queen King]
+class Deck
+
+  RANKS = %i[A 2 3 4 5 6 7 8 9 10 J Q K]
 
   SUITS = %i[Hearts Spades Diamonds Clubs]
 
@@ -18,7 +19,7 @@ class Cards
     deck = []
     SUITS.each do |suit|
       RANKS.each do |rank|
-        deck << "#{rank} of #{suit}"
+        deck << Card.new(rank, suit)
       end
     end
     deck.flatten
