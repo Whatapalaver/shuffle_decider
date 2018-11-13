@@ -4,7 +4,7 @@ require_relative 'card'
 
 class DeckOfCards
 
-  attr_reader :deck
+  attr_accessor :deck
 
   def initialize
     @deck = generate_deck()

@@ -17,6 +17,10 @@ class Game
     @hands = generate_hands()
   end
 
+  def shuffle_pack
+    @deck_of_cards.deck = @deck_of_cards.deck.shuffle()
+  end
+
   private
 
   def generate_hands

@@ -22,4 +22,14 @@ RSpec.describe Game do
 
   end
 
+  describe 'shuffle_pack' do
+
+    it "shuffled and unshuffled decks have different orders of cards" do
+      @unshuffled_deck = test_game.deck_of_cards.deck
+      @shuffled_deck = test_game.shuffle_pack
+      expect(@shuffled_deck).to match_array(@unshuffled_deck)
+      expect(@shuffled_deck).not_to eq(@unshuffled_deck)
+    end
+  end
+
 end
