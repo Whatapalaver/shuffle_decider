@@ -2,10 +2,11 @@ require 'game'
 
 RSpec.describe Game do
   subject(:test_game) { described_class.new() }
-  
+  subject(:game) { described_class.new() }
+
   context 'Initialisation' do
     it "new Game has a default number of players" do
-      expect(test_game.player_number).to eq(Game::DEFAULT_PLAYERS)
+      expect(test_game.player_numbers).to eq(Game::DEFAULT_PLAYERS)
     end
 
     it "new Game has a default deal size" do
@@ -40,7 +41,34 @@ RSpec.describe Game do
       player2_hand = test_game.hands[1].hand
       expect(player1_hand.length).to eq(Game::DEFAULT_DEAL_SIZE)
       expect(player2_hand.length).to eq(Game::DEFAULT_DEAL_SIZE)
+      
     end
+  end
+
+  describe 'draw?' do
+
+    it "is true when both hands score 0" do
+      expect(test_game.draw?).to be_truthy
+    end
+
+    it "is false when an unshuffled deck is dealt to players" do
+      test_game.deal
+      expect(test_game.draw?).to be_falsey
+    end
+
+  end
+
+  describe 'result' do
+
+    it "returns a draw when both hands score 0" do
+      expect(test_game.result).to eq("It's a draw")
+    end
+
+    it "returns the winner when an unshuffled pack is dealt" do
+      test_game.deal
+      expect(test_game.result).to eq("Player 1 wins!")
+    end
+
   end
 
 end
