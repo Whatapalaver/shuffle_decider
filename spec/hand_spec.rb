@@ -1,7 +1,7 @@
 require 'hand'
 
-RSpec.describe Hand do
-  subject(:test_hand) { described_class.new(1) }
+RSpec.describe HandOfCards do
+  subject(:test_hand_of_cards) { described_class.new(1) }
   subject(:hand_of_player1) { described_class.new(1) }
   subject(:hand_of_player2) { described_class.new(2) }
   let(:ace) { double :card, :value => 1 }
@@ -30,16 +30,16 @@ RSpec.describe Hand do
     end
 
     it 'Hand of cards can be scored' do
-      test_hand.hand.push(ace)
-      expect(test_hand.score).to eq(1)
-      test_hand.hand.push(two)
-      expect(test_hand.score).to eq(3)
-      test_hand.hand.push(three)
-      expect(test_hand.score).to eq(6)
-      test_hand.hand.push(queen)
-      expect(test_hand.score).to eq(18)
-      test_hand.hand.push(king)
-      expect(test_hand.score).to eq(31)
+      test_hand_of_cards.hand.push(ace)
+      expect(test_hand_of_cards.score).to eq(1)
+      test_hand_of_cards.hand.push(two)
+      expect(test_hand_of_cards.score).to eq(3)
+      test_hand_of_cards.hand.push(three)
+      expect(test_hand_of_cards.score).to eq(6)
+      test_hand_of_cards.hand.push(queen)
+      expect(test_hand_of_cards.score).to eq(18)
+      test_hand_of_cards.hand.push(king)
+      expect(test_hand_of_cards.score).to eq(31)
     end
 
 

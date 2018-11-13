@@ -1,10 +1,10 @@
 require 'deck'
 
-RSpec.describe Deck do
-  subject(:deck) { described_class.new() }
+RSpec.describe DeckOfCards do
+  subject(:deck_of_cards) { described_class.new() }
 
   it "Initialises with a deck of 52 cards" do
-    expect(deck.deck.length).to eq(52)
+    expect(deck_of_cards.deck.length).to eq(52)
   end
 
 end

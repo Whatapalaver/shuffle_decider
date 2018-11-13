@@ -13,7 +13,7 @@ RSpec.describe Game do
     end
 
     it "has a deck of 52 cards" do
-      expect(test_game.deck.deck.length).to eq(52)
+      expect(test_game.deck_of_cards.deck.length).to eq(52)
     end
 
     it "new Game has a hand for each player" do

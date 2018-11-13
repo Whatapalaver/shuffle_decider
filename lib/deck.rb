@@ -2,7 +2,7 @@
 
 require_relative 'card'
 
-class Deck
+class DeckOfCards
 
   attr_reader :deck
 

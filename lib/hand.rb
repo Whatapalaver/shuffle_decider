@@ -1,6 +1,6 @@
 # A hand continues a number of cards 
 
-class Hand
+class HandOfCards
 
   attr_reader :hand, :player
 
