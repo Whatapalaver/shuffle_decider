@@ -2,6 +2,6 @@
   background-color: #fff;
 }
 .radiobutton:checked + .radiobutton-wrapper div {
-  border-color: #19a974;
+  border-color: #D5008F;
 }
 
