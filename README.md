@@ -3,7 +3,12 @@ Coding Chalenge: World's Simplest Poker
 
 *Build a very simple card game, played between two or more players. Immediately after the cards are dealt, the player with the highest hand wins.*
 
+Screenshots
+----
+
 ![html GUI](https://github.com/Whatapalaver/shuffle_decider/blob/master/Shuffle_Decider.png)  
+
+![html results](https://github.com/Whatapalaver/shuffle_decider/blob/master/Shuffle_result.png)  
 
 Basic User Stories
 ----

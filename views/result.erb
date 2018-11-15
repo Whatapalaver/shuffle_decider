@@ -11,11 +11,16 @@
       <div class="pv3 pa2 bg-dark-pink moon-gray f3">
             <%= @game.result %>
       </div>
-      <div class="outline pv4 pa2 bg-moon-gray tl">
-            <% @game.hands.each do |hand| %>
-              <div class="result pv2 bb"><%= "#{hand.player}: #{hand.display_hand}" %></div>
-              <% end %>
-      </div>
+      <div class="outline pv2 pa2 bg-moon-gray tl">
+        <% @game.hands.each do |hand| %>
+          <div class="result pv2 bb"><%= "#{hand.player}: #{hand.display_hand}" %></div>
+        <% end %>
+        <div class="form tc pv2">
+          <form action="/">
+            <input class="f6 link dim br3 ba b-dark-pink bw2 ph3 pv2 mb2 dib dark-pink" type="submit" value="Replay?">
+          </form>
+        </div>
+      </div> 
     </div>
   
     <div class="fl w-100 w-25-ns pa2">
