@@ -3,6 +3,9 @@ require 'game'
 RSpec.describe Game do
   subject(:test_game) { described_class.new() }
   subject(:game) { described_class.new() }
+  subject(:three_player_game) { described_class.new(3) }
+  subject(:six_player_game) { described_class.new(6) }
+  subject(:deal_of_20_game) { described_class.new(2, 20) }
 
   context 'Initialisation' do
     it "new Game has a default number of players" do
@@ -19,6 +22,15 @@ RSpec.describe Game do
 
     it "new Game has a hand for each player" do
       expect(test_game.hands.length).to eq(Game::DEFAULT_PLAYERS)
+    end
+
+    it "allows player numbers to be altered" do
+      expect(three_player_game.hands.length).to eq(3)
+      expect(six_player_game.hands.length).to eq(6)
+    end
+
+    it "raises an error when unfair combinations are selected" do
+      expect { described_class.new(3, 20) }.to raise_error("Number of players * deal size must not exceed 52")
     end
 
   end

@@ -15,6 +15,8 @@ class Game
     @deal_size = deal_size
     @deck_of_cards = DeckOfCards.new
     @hands = generate_hands()
+
+    validate!
   end
 
   def shuffle_pack
@@ -70,10 +72,12 @@ class Game
     @hands.map { |players_hand| players_hand.score }
   end
 
-  
-
   def max_score_index
     player_scores.each_with_index.max[1]
+  end
+
+  def validate!
+    raise ArgumentError.new("Number of players * deal size must not exceed 52") unless (@deal_size * @player_numbers) < 52
   end
 
 end

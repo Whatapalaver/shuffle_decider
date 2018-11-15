@@ -12,7 +12,7 @@ Basic User Stories
 
 - [x] As a player, who would like to extend this game to my friends, I would like to control the number of players or hands that are dealt.
 
-- [ ] As the computer, who wants to prevent unfair play, I would like to block unfair or impossible combinations of players and cards.
+- [x] As the computer, who wants to prevent unfair play, I would like to block unfair or impossible combinations of players and cards.
 
 Gold-Plated User Stories
 -----
