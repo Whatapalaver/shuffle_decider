@@ -43,12 +43,6 @@ class Game
     @hands[bonus_score_index].player + " wins!"
   end
 
-  def draw?
-    # Method only required until suit bonus is utilised
-    # Only works with default two player game
-    player_scores[0] == player_scores[1]
-  end
-
   def display_player_hands
     @hands.each do |player| 
       puts "#{player.player} scores: #{player.score}"
@@ -59,6 +53,10 @@ class Game
     return nil
   end
 
+  def player_scores
+    @hands.map { |players_hand| players_hand.score }
+  end
+
   private
 
   def generate_hands
@@ -67,10 +65,6 @@ class Game
       hands << HandOfCards.new(player)
     end
     hands
-  end
-
-  def player_scores
-    @hands.map { |players_hand| players_hand.score }
   end
 
   def player_score_with_bonus

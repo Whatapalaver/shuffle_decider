@@ -13,7 +13,8 @@
       </div>
       <div class="outline pv2 pa2 bg-moon-gray tl">
         <% @game.hands.each do |hand| %>
-          <div class="result pv2 bb"><%= "#{hand.player}: #{hand.display_hand}" %></div>
+          <div class="player pv2 dark-pink"><%= "#{hand.player} scores: #{hand.score}" %></div>
+          <div class="hand pv2 bb"><%= hand.display_hand %></div>
         <% end %>
         <div class="form tc pv2">
           <form action="/">

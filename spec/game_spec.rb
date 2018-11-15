@@ -57,19 +57,6 @@ RSpec.describe Game do
     end
   end
 
-  describe 'draw?' do
-
-    it "is true when both hands score 0" do
-      expect(test_game.draw?).to be_truthy
-    end
-
-    it "is false when an unshuffled deck is dealt to players" do
-      test_game.deal
-      expect(test_game.draw?).to be_falsey
-    end
-
-  end
-
   describe 'result' do
 
     it "returns the winner when an unshuffled pack is dealt" do
