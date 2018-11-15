@@ -3,6 +3,8 @@ Coding Chalenge: World's Simplest Poker
 
 *Build a very simple card game, played between two or more players. Immediately after the cards are dealt, the player with the highest hand wins.*
 
+![html GUI](https://github.com/Whatapalaver/shuffle_decider/blob/master/Shuffle_Decider.png)  
+
 Basic User Stories
 ----
 
@@ -17,7 +19,7 @@ Basic User Stories
 Gold-Plated User Stories
 -----
 
-- [ ] As a visual player, so that I can avoid command line geekery, I would like an HTML user interface to play the game.
+- [x] As a visual player, so that I can avoid command line geekery, I would like an HTML user interface to play the game.
 
 - [ ] As a computer that likes to show off my capabilities, I would like to sort each hand by suit and value.
 
@@ -34,7 +36,7 @@ To Use
 - Change into the directory `cd shuffle_decider`
 - Install dependencies `bundle install`
 - You should also create a .gitignore file to prevent all the coverage files being sent to github: `echo "coverage" >> .gitignore`  
-- to run the server `shotgun config.ru`
+- to run the server `ruby app.rb`
 
 To test
 ----
