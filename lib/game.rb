@@ -56,7 +56,6 @@ class Game
     end
     return nil
   end
-  
 
   private
 

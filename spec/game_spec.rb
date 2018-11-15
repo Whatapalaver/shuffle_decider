@@ -83,4 +83,29 @@ RSpec.describe Game do
 
   end
 
+  describe 'display_player_hands' do
+    it "Displays card details for default game and an unshuffled pack" do
+      expected_output = <<-VERSE
+Player 1 scores: 45
+=====================
+K_Clubs
+J_Clubs
+9_Clubs
+7_Clubs
+5_Clubs
+---------------------
+Player 2 scores: 40
+=====================
+Q_Clubs
+10_Clubs
+8_Clubs
+6_Clubs
+4_Clubs
+---------------------
+VERSE
+      test_game.deal
+      expect { test_game.display_player_hands }.to output(expected_output).to_stdout
+    end
+  end
+
 end

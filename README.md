@@ -36,7 +36,8 @@ To Use
 - You should also create a .gitignore file to prevent all the coverage files being sent to github: `echo "coverage" >> .gitignore`  
 - to run the server `shotgun app.rb` or `sinatra app.rb`
 
-To test:
+To test
+----
 
 - This command will run both the rspec tests, capybara and simplecov `bundle exec rspec`
 - To view the coverage detail as a webpage run `open coverage/index.html`
