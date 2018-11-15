@@ -72,10 +72,6 @@ RSpec.describe Game do
 
   describe 'result' do
 
-    it "returns a draw when both hands score 0" do
-      expect(test_game.result).to eq("It's a draw")
-    end
-
     it "returns the winner when an unshuffled pack is dealt" do
       test_game.deal
       expect(test_game.result).to eq("Player 1 wins!")

@@ -30,7 +30,7 @@ Gold-Plated User Stories
 
 - [ ] As a wannabe poker player, I would like to inject some excitement into the scoring by awarding bonus points for pairs, three of a kinds and straights.
 
-- [ ] As a player who cannot accept a draw, I would like the suit to determine the overall winner.
+- [x] As a player who cannot accept a draw, I would like the suit to determine the overall winner.
 
 - [ ] As a very keen player of `shuffle_decider`, I would like to be able to signup for an account so I can keep track of my scores.
 

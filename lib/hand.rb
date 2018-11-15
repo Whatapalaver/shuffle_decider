@@ -11,12 +11,21 @@ class HandOfCards
 
   def score
     if @hand.length.zero?
-      score = 0
+      0
     else
       values_array = @hand.map { |card| card.value }
-      score = values_array.reduce(:+)
+      values_array.reduce(:+)
     end
 
+  end
+
+  def hand_bonus
+    if @hand.length.zero?
+      0
+    else
+      values_array = @hand.map { |card| card.card_bonus }
+      values_array.reduce(:+)
+    end
   end
 
   def display_hand

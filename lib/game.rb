@@ -40,13 +40,7 @@ class Game
   end
 
   def result
-    if draw?
-      outcome = "It's a draw"
-    else
-      outcome = @hands[max_score_index].player + " wins!"
-    end
-    outcome
-
+    @hands[bonus_score_index].player + " wins!"
   end
 
   def draw?
@@ -79,8 +73,16 @@ class Game
     @hands.map { |players_hand| players_hand.score }
   end
 
+  def player_score_with_bonus
+    @hands.map { |players_hand| (players_hand.score + players_hand.hand_bonus) }
+  end
+
   def max_score_index
     player_scores.each_with_index.max[1]
+  end
+
+  def bonus_score_index
+    player_score_with_bonus.each_with_index.max[1]
   end
 
   def validate!

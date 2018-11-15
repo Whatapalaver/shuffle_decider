@@ -12,10 +12,24 @@ class Card
     @rank = rank
     @suit = suit
     @value = value()
+    @card_bonus = card_bonus()
   end
 
   def value
     RANKS.index(rank.to_sym) + 1
+  end
+
+  def card_bonus
+    case @suit
+    when 'Hearts'
+      4
+    when 'Spades'
+      3
+    when 'Diamonds'
+      2
+    else
+      1
+    end
   end
 
 end

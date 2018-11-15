@@ -34,4 +34,13 @@ RSpec.describe Card do
     end
   end
 
+  describe 'card_bonus' do
+    it "A card of the Hearts suit has a bonus worth 4" do
+      expect(queen_of_hearts.card_bonus).to eq(4)
+    end
+    it "A card of the Clubs suit has a bonus worth 1" do
+      expect(two_of_clubs.card_bonus).to eq(1)
+    end
+  end
+
 end
