@@ -10,6 +10,14 @@ class Game
 
   attr_reader :player_numbers, :deal_size, :deck_of_cards, :hands
 
+  def self.create(player_numbers = DEFAULT_PLAYERS, deal_size = DEFAULT_DEAL_SIZE)
+    @game = Game.new(player_numbers, deal_size)
+  end
+
+  def self.instance
+    @game
+  end
+
   def initialize(player_numbers = DEFAULT_PLAYERS, deal_size = DEFAULT_DEAL_SIZE)
     @player_numbers = player_numbers
     @deal_size = deal_size
