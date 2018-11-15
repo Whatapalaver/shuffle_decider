@@ -22,6 +22,7 @@ class HandOfCards
   def display_hand
     display = @hand.map { |card| "#{card.rank}_#{card.suit}" }
     puts display.join("\n")
+    return display.join(', ')
   end
 
 end

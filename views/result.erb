@@ -8,11 +8,13 @@
       <div class="suits_logo outline bg-white pv4"><img src='/images/suits.png'/></div>
     </div>
     <div class="fl w-100 w-50-ns pa2 bg-dark-gray">
-      <div class="outline pv4 pa2 bg-moon-gray">
+      <div class="outline pv4 pa2 bg-moon-gray red">
             <%= @game.result %>
       </div>
-      <div class="outline pv4 pa2 bg-moon-gray">
-            Placeholder for hands
+      <div class="outline pv4 pa2 bg-moon-gray tl">
+            <% @game.hands.each do |hand| %>
+              <div class="result pv2 bb"><%= "#{hand.player}: #{hand.display_hand}" %></div>
+              <% end %>
       </div>
     </div>
   
