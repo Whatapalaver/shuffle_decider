@@ -1,1 +1,69 @@
-<h1 class="tc">Welcome to Shuffle Decider</h1>
+<header>
+  <h1 class="tc">Welcome to Shuffle Decider</h1>
+</header>
+
+<div class="mw9 center ph3-ns">
+  <div class="cf ph2-ns tc">
+    <div class="fl w-100 w-25-ns pa2">
+      <div class="suits_logo outline bg-white pv4"><img src='/images/suits.png'/></div>
+    </div>
+    <div class="fl w-100 w-50-ns pa2 bg-dark-gray">
+      <div class="parameter_form outline pv4 pa2 bg-moon-gray">
+        <div class="form">
+          <form action="/setup" method="post">
+            <div class="flex flex-column items-left pv2">
+              <label class="relative flex items-center mv2">
+                <input checked="checked" class="absolute z-5 w-100 h-100 o-0 pointerinput-reset pointer radiobutton" value = 2 name="radio" type="radio" />
+                  <span class="relative z-4 dib w1 h1 bg-mid-gray overflow-hidden br-100 v-mid bg-animate bg-center radiobutton-wrapper">
+                    <div class="absolute top-0 left-0 w1 h1 ba bw2 b--transparent br-100"></div>
+                  </span>
+                <div class="dib ml2 helvetica mid-gray lh-solid">
+                  Two Player Game
+                </div>
+              </label>
+              <label class="relative flex items-center mv2">
+                <input class="absolute z-5 w-100 h-100 o-0 input-reset pointer radiobutton" value = 3 name="radio" type="radio" />
+                  <span class="relative z-4 dib w1 h1 bg-mid-gray overflow-hidden br-100 v-mid bg-animate bg-center radiobutton-wrapper">
+                    <div class="absolute top-0 left-0 w1 h1 ba bw2 b--transparent br-100"></div>
+                  </span>
+                <div class="dib ml2 helvetica mid-gray lh-solid">
+                  Three Player Game
+                </div>
+              </label>
+            </div>
+
+            <div class="flex flex-column items-left bt pv2">
+              <label class="relative flex items-center mv2">
+                <input checked="checked" class="absolute z-5 w-100 h-100 o-0 pointerinput-reset pointer radiobutton" value = 5 name="deal" type="radio" />
+                  <span class="relative z-4 dib w1 h1 bg-mid-gray overflow-hidden br-100 v-mid bg-animate bg-center radiobutton-wrapper">
+                    <div class="absolute top-0 left-0 w1 h1 ba bw2 b--transparent br-100"></div>
+                  </span>
+                <div class="dib ml2 helvetica mid-gray lh-solid">
+                  Five Card Deal
+                </div>
+              </label>
+              <label class="relative flex items-center mv2">
+                <input class="absolute z-5 w-100 h-100 o-0 input-reset pointer radiobutton" value = 7 name="deal" type="radio" />
+                  <span class="relative z-4 dib w1 h1 bg-mid-gray overflow-hidden br-100 v-mid bg-animate bg-center radiobutton-wrapper">
+                    <div class="absolute top-0 left-0 w1 h1 ba bw2 b--transparent br-100"></div>
+                  </span>
+                <div class="dib ml2 helvetica mid-gray lh-solid">
+                  Seven Card Deal
+                </div>
+              </label>
+            </div>
+                        
+            <input type="submit" value="Submit">
+          </form>
+      </div>
+      </div>
+    </div>
+  
+    <div class="fl w-100 w-25-ns pa2">
+      <div class="cards_logo outline bg-white pv4"><img src='/images/cards.png'/></div>
+    </div>
+  </div>
+</div>
+
+
+

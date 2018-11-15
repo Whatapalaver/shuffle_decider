@@ -34,7 +34,7 @@ To Use
 - Change into the directory `cd shuffle_decider`
 - Install dependencies `bundle install`
 - You should also create a .gitignore file to prevent all the coverage files being sent to github: `echo "coverage" >> .gitignore`  
-- to run the server `shotgun app.rb` or `sinatra app.rb`
+- to run the server `shotgun config.ru`
 
 To test
 ----
