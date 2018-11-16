@@ -6,6 +6,8 @@ Coding Chalenge: World's Simplest Poker
 Screenshots
 ----
 
+Deployed on Heroku as [Shuffle Decider](https://pixie-lab-test.herokuapp.com/)  
+
 ![html GUI](https://github.com/Whatapalaver/shuffle_decider/blob/master/Shuffle_Decider.png)  
 
 ![html results](https://github.com/Whatapalaver/shuffle_decider/blob/master/Shuffle_result.png)  
@@ -89,4 +91,10 @@ My approach
 
 I have opted to use Ruby and a simple Sinatra based web app as I am more familiar running TDD testing using rspec.
 
+Shoutouts
+-----  
 
+Heroku hosting struggles were aided by the following posts:
+
+- Best practice using [Sinatra's Modular Style](https://blog.carbonfive.com/2013/06/24/sinatra-best-practices-part-one/)
+- [Bundler not found error](https://devcenter.heroku.com/articles/bundler)
