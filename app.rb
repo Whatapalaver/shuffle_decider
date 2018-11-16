@@ -4,7 +4,9 @@ require './lib/deck.rb'
 require './lib/hand.rb'
 
 class ShuffleDecider < Sinatra::Base
-  # enable :sessions  
+
+  set :root, File.dirname(__FILE__)
+
   before do
     @game = Game.instance
   end
@@ -36,6 +38,6 @@ class ShuffleDecider < Sinatra::Base
   end
 
   # start the server if ruby file executed directly
-  run! if app_file == $0
+  # run! if app_file == $0
 
 end

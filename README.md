@@ -41,7 +41,7 @@ To Use
 - Change into the directory `cd shuffle_decider`
 - Install dependencies `bundle install`
 - You should also create a .gitignore file to prevent all the coverage files being sent to github: `echo "coverage" >> .gitignore`  
-- to run the server `ruby app.rb`
+- to run the server `rackup config.ru`
 
 To test
 ----
